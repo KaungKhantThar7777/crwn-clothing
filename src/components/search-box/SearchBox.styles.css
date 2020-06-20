@@ -1,0 +1,8 @@
+.SearchBox input {
+  line-height: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  height: 40px;
+}
