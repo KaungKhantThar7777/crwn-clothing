@@ -19,12 +19,15 @@ class App extends React.Component {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot((snapshot) => {
-          this.setState({
-            currentUser: {
-              id: snapshot.id,
-              ...snapshot.data(),
+          this.setState(
+            {
+              currentUser: {
+                id: snapshot.id,
+                ...snapshot.data(),
+              },
             },
-          });
+            () => console.log(this.state)
+          );
         });
       }
     });
@@ -33,10 +36,16 @@ class App extends React.Component {
     this.unsubscribeFromAuth();
   }
 
+  logoutUser = () => {
+    this.setState({ currentUser: null });
+  };
   render() {
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header
+          currentUser={this.state.currentUser}
+          logoutUser={this.logoutUser}
+        />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/shop" component={ShopPage} />
