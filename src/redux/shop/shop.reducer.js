@@ -1,6 +1,6 @@
 import { shopTypes } from "./shop.types";
 const INITIAL_STATE = {
-  isLoading: false,
+  isLoading: true,
   collections: null,
   errorMessage: undefined,
 };
@@ -10,19 +10,19 @@ const shopReducer = (state = INITIAL_STATE, action) => {
     case shopTypes.FETCH_COLLECTIONS_START:
       return {
         ...state,
-        isFetching: true,
+        isLoading: true,
       };
     case shopTypes.FETCH_COLLECTIONS_SUCCESS:
       return {
         ...state,
-        isFetching: false,
+        isLoading: false,
         collections: action.payload,
       };
 
     case shopTypes.FETCH_COLLECTIONS_FAILURE:
       return {
         ...state,
-        isFetching: false,
+        isLoading: false,
         collections: action.payload,
       };
     default:
