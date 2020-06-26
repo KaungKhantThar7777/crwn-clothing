@@ -26,3 +26,7 @@ export const decreaseQty = (id) => {
     payload: id,
   };
 };
+
+export const clearCartOnSignout = () => ({
+  type: CartTypes.CLEAR_CART,
+});
