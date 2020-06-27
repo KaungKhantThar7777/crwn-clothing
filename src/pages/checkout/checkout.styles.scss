@@ -35,4 +35,10 @@
     font-size: 24px;
     color: red;
   }
+
+  .btn-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
 }

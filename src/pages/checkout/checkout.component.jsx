@@ -44,7 +44,9 @@ function CheckoutPage({ cartItems, total }) {
         <br />
         4242 4242 4242 4242 Exp- 01/21 CSV-123
       </div>
-      <StripeCheckoutButton price={total} />
+      <div className="btn-container">
+        <StripeCheckoutButton price={total} />
+      </div>
     </div>
   );
 }
