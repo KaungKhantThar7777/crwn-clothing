@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 export const HeaderContainer = styled.div`
   height: 70px;
   width: 100%;
+  max-width: 1200px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
 
   @media screen and (max-width: 500px) {
     justify-content: center;
