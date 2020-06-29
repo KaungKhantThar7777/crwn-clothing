@@ -4,11 +4,9 @@ import ShopPage from "./pages/shop/shop.component";
 import CheckoutPage from "./pages/checkout/checkout.component";
 
 import { Route, Switch, Redirect } from "react-router-dom";
-import "./App.css";
-
 import Header from "./components/header/header.component";
 import SignInUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
-
+import "./App.scss";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { checkUserSession } from "./redux/user/user.actions";
